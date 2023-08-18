@@ -65,6 +65,9 @@ h3 code span,
 h4 code span,
 h5 code span,
 h6 code span,
+ul code span,
+ol code span,
+li code span,
 p code span {
   /* background-color: #652487;
   background-image: linear-gradient(160deg,#652487,#443ac3 35%,#0174b7 68%,#04988e); */
@@ -79,6 +82,9 @@ h3 code,
 h4 code,
 h5 code,
 h6 code,
+ul code,
+ol code,
+li code,
 p code {
   background-color: lightgray;
   padding: 0.1rem;
