@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <style>
+        #container {
+            width: 300px;
+            height: 500px;
+            border: solid 1px;
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: azure;
+        }
+
+        #screen {
+            width: 280px;
+            height: 90px;
+            border: solid 1px;
+            margin: 10px;
+            font-size: 20px;
+            line-height: 1px;
+            text-align: right;
+            overflow: auto;
+        }
+
+        #formula,
+        #result {
+            height: 1px;
+            margin-right: 30px;
+        }
+
+        #keyarea {
+            width: 280px;
+            height: 370px;
+            border: solid 1px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .key {
+            width: 60px;
+            height: 40px;
+            border: solid 1px;
+            float: left;
+            border-radius: 10px;
+            margin: 8px 10px 5px 19px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 30px;
+            color: white;
+            background-color: darkgrey;
+        }
+        .key:hover{
+            background-color: burlywood;
+        }
+        .key:active{
+            background-color: dodgerblue;
+        }
+        
+    </style>
+    <script>
+        $(document).ready(function () {
+            var key;
+            var formula = "";
+            var displayF="";
+            $(".key").click(function () {
+                if(formula==""){
+                    $("#result").text("");
+                }
+                key = $(this).text();
+                if (key == "=") {
+                    //判断是否为算式
+                    try {
+                        console.log(eval(formula));
+                        $("#result").text(eval(formula));
+                        formula = "";
+                        return;
+                    } catch (error) {
+                        formula = "";
+                        console.log("输入错误");
+                        $("#result").text("输入错误");
+                    }
+
+                }
+                else if ((key >= 0 && key <= 9) || key == ".") {
+                    formula += key;
+                }
+                else if (key == "C") {
+                    formula="";
+                }
+                
+                else {
+                    //运算符号
+                    if (key == "x") {
+                        formula += "*";
+                    } else if (key == "÷") {
+                        formula += "/";
+                    } else {
+                        formula += key;
+                    }
+                }
+                
+                displayF=formula.replace(/\*/g,"x");
+                displayF=displayF.replace(/\//g,"÷");
+                $("#formula").text(displayF);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="screen">
+            <p id="formula">计算器</p><br>
+            <p id="result"></p>
+        </div>
+        <div id="keyarea">
+            <button class="key" id="n1">1</button>
+            <button class="key" id="n2">2</button>
+            <button class="key" id="n3">3</button>
+            <button class="key" id="n4">4</button>
+            <button class="key" id="n5">5</button>
+            <button class="key" id="n6">6</button>
+            <button class="key" id="n7">7</button>
+            <button class="key" id="n8">8</button>
+            <button class="key" id="n9">9</button>
+            <button class="key" id="n9">0</button>
+            <button class="key">+</button>
+            <button class="key">-</button>
+            <button class="key">x</button>
+            <button class="key">÷</button>
+            <button class="key">=</button>
+            <button class="key">(</button>
+            <button class="key">)</button>
+            <button class="key">.</button>
+            <button class="key">C</button>
+
+        </div>
+    </div>
+</body>
+
+</html>

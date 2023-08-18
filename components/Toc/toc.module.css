@@ -1,0 +1,47 @@
+.toc {
+  width: 2rem;
+  min-width: 2rem;
+  position: sticky;
+  top: 1rem;
+  overflow: hidden;
+  height: 1.6rem;
+  transition: 0.3s ease-in-out;
+}
+.open {
+  min-width: 15rem;
+  height: fit-content;
+  border: 1px solid gray;
+  margin: 1rem;
+  position: sticky;
+  top: 1rem;
+  overflow: auto;
+  max-height: 90%;
+  border-radius: 10px;
+}
+.tocInner {
+  margin-top: 1.5rem;
+  position: relative;
+}
+.tocTitle {
+  cursor: pointer;
+  color: lightslategray;
+}
+.tocTitle:hover {
+  /* color: black; */
+  font-weight: 600;
+}
+.mainTitle {
+  color: mediumorchid;
+  /* font-weight: bold; */
+}
+.button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  font-size: 0.8rem;
+  /* min-width: 4rem; */
+  line-height: 1.6rem;
+  color: gray;
+  cursor: pointer;
+}

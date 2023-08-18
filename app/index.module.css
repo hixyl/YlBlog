@@ -1,0 +1,93 @@
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+@media (max-width: 740px) {
+  .wrapper {
+    height: 80vh;
+  }
+}
+
+.mainContainer {
+  display: flex;
+  width: 100%;
+}
+
+.firstArea {
+  width: 100%;
+  /* height: 90vh; */
+  display: flex;
+  flex-direction: row;
+}
+
+.indexImg {
+    width: calc(3rem + 45%);
+    height: auto;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+.poem {
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 0.7rem;
+  padding: 0.8rem;
+  height: 30%;
+}
+
+.leftArea {
+  width: 38%;
+  position: relative;
+}
+
+.rightArea {
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.mainText {
+  font-size: 1.5rem;
+  color: black;
+  padding-right: 2rem;
+}
+.titleBox {
+  border-left: 3px solid skyblue;
+  padding-left: 0.3rem;
+  padding-right: 2rem;
+  margin-left: -0.5rem;
+  color: gray;
+  font-size: 1.1rem;
+}
+.articleTitle {
+  margin-bottom: 0.8rem;
+}
+.articleTitle:hover {
+  color: black;
+  font-size: 1.2rem;
+  transition: 0.2s ease-in-out;
+}
+.keywords {
+  display: flex;
+  flex-direction: row;
+  gap: 3.4rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.keyword {
+  display: inline-block;
+  color: orange;
+}
+.newArticleTag {
+  color: cornflowerblue;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.newArticleTag:hover {
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: 0.2s ease-in-out;
+}

@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.2rem;
+}
+.pagination a {
+    margin: 0 0.31rem;
+    padding: 0.21rem 0.32rem;
+    border: 1px solid #ccc;
+    border-radius: 0.31rem;
+    text-decoration: none;
+    color: #333;
+    min-width: max-content;
+    font-size: small;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+
+
+.currentPagination {
+    background-color: #f0f0f0;
+}
+
+.ellipsis {
+    margin: 0 5px;
+    color: #666;
+}

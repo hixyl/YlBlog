@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 3.3rem;
+  flex-direction: row;
+}
+.iconArea {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.logoLink {
+  /* 取消默认的链接样式 */
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 500;
+  height: fit-content;
+  min-width: 7rem;
+  padding: 0.7rem;
+}
+
+@media (min-width: 740px) {
+    .menuIcon {
+        display: none;
+    }
+    .iconArea {
+        display: none;
+    }
+}
+@media (max-width: 740px) {
+    .menuIcon {
+
+    }
+}

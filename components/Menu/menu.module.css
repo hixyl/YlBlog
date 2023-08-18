@@ -1,0 +1,74 @@
+@media (min-width: 740px) {
+  .menuBox {
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+    padding: 1.5rem;
+    width: 550px;
+  }
+}
+@media (max-width: 740px) {
+  .menuBox {
+    display: none;
+  }
+}
+.navListItem {
+  color: gray;
+  position: relative;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  min-width: 2.2rem;
+}
+.navListItem::before {
+  content: "";
+  background-image: var(--icon-unSelected);
+  display: inline-block;
+  background-size: contain;
+    background-repeat: no-repeat;
+    width: 1rem; /* 图标宽度 */
+    height: 1rem; /* 图标高度 */
+    margin-right: 0.2rem; /* 图标与文字间的间距 */
+}
+.navListItem:hover {
+  color: black;
+  cursor: pointer;
+}
+.navListItemSelected {
+    color: black;
+    position: relative;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    min-width: 2.2rem;
+}
+.navListItemSelected::before, .navListItem:hover::before {
+  content: "";
+  background-image: var(--icon-selected);
+  display: inline-block;
+  background-size: contain;
+    background-repeat: no-repeat;
+    width: 1rem; /* 图标宽度 */
+    height: 1rem; /* 图标高度 */
+    margin-right: 0.2rem; /* 图标与文字间的间距 */
+}
+.navListItem:hover::after, .navListItemSelected::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: -10%;
+  width: 120%;
+  height: 3px;
+  border-radius: 10%;
+  background-color: skyblue;
+  
+}
+.navListItem:hover::after {
+    animation-name: item-slide;
+    animation-duration: 0.5s;
+}
+@keyframes item-slide {
+  0% {
+    width: 0;
+  }
+}

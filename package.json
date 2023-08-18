@@ -1,0 +1,34 @@
+{
+  "name": "my-new-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next-sitemap && touch ./out/.nojekyll",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
+    "cheerio": "^1.0.0-rc.12",
+    "dayjs": "^1.11.9",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.12",
+    "front-matter": "^4.0.2",
+    "highlight.js": "^11.8.0",
+    "next": "13.4.12",
+    "next-sitemap": "^4.2.2",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-toastify": "^9.1.3",
+    "remark": "^14.0.3",
+    "remark-html": "^15.0.2",
+    "rss": "^1.2.2",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
+  }
+}

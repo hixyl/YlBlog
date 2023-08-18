@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
+  box-sizing: border-box;
+  font-size: 16px; /* 设置根元素字体大小 */
+  /* --global_background_color: rgba(255, 204, 110, 0); */
+}
+* {
+  box-sizing: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  } */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background-image: linear-gradient(135deg, #e0f3ff, #f3e0ff);
+}
+a {
+  /* 取消默认的链接样式 */
+  text-decoration: none;
+  color: inherit;
+}
+article a {
+  /* 如果是文章内的链接，按默认来 */
+  color: blue;
+  text-decoration: underline;
+  word-wrap: break-word;
+}
+article a:visited {
+  color: purple;
+}
+
+pre {
+  background-color: #652487;
+  background-image: linear-gradient(
+    160deg,
+    #652487,
+    #443ac3 35%,
+    #0174b7 68%,
+    #04988e
+  );
+  color: #e7e4eb;
+  border-radius: 0.8rem;
+  padding: 0.7rem;
+  overflow: auto;
+  backdrop-filter: blur(2rem); /* 调整模糊程度 */
+}
+h1 code span,
+h2 code span,
+h3 code span,
+h4 code span,
+h5 code span,
+h6 code span,
+p code span {
+  /* background-color: #652487;
+  background-image: linear-gradient(160deg,#652487,#443ac3 35%,#0174b7 68%,#04988e); */
+  color: black !important;
+  font-weight: bold;
+  /* border-radius: 0.2rem; */
+  padding: 0.05rem;
+}
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code,
+p code {
+  background-color: lightgray;
+  padding: 0.1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  max-width: 100%;
+}
+
+/* 引用样式 */
+blockquote {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+}
+
+.top-icon {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  cursor: pointer;
+}

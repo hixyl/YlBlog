@@ -1,0 +1,14 @@
+pre {
+    position: relative;
+    padding-top: 1.3rem;
+}
+.copy-button {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.8rem;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+    font-weight: bolder;
+}

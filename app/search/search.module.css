@@ -1,0 +1,33 @@
+.pageBody {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.pageBodyMain {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    height: 100%;
+}
+
+    
+
+.bodyContanier {
+    overflow: auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 78vh;
+    width: 100%;
+    
+}
+
+
+.pageList {
+    border: 1px ;
+    margin-top: 1rem;
+}
+.noResult {
+    text-align: center;
+    padding-top: 10%;
+}

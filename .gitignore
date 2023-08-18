@@ -1,0 +1,42 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+#next
+.next/
+out/
+
+# Vite
+/dist/
+/.cache/
+/*.tsbuildinfo
+
+# Vuepress
+/.vuepress/dist
+
+# Miscellaneous
+.DS_Store
+.vscode/
+*.log
+*.log.*
+*.sqlite3
+*.db
+*.sqlite
+*.swp
+*.swo
+*.swn
+*.pdf
+
+# Local environment variables
+.env.local
+.env.*.local
+
+# Mac-specific
+._*
+
+# IDE settings
+/.idea
+/.vs

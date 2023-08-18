@@ -1,0 +1,52 @@
+.mobileMenu {
+  width: 100%;
+  height: 0;
+  overflow: auto;
+  transition: height 0.3s ease-in-out;
+  position: relative;
+}
+
+.open {
+  height: 70vh;
+  border-bottom: 1px solid gray;
+  border-radius: 10px;
+}
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.item {
+  text-align: center;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item::before {
+  content: "";
+  background-image: var(--icon-unSelected);
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1rem; /* 图标宽度 */
+  height: 1rem; /* 图标高度 */
+  margin-right: 0.2rem; /* 图标与文字间的间距 */
+}
+.item:hover {
+  color: black;
+}
+.itemSelected {
+  color: black;
+}
+.item:hover::before,
+.itemSelected::before {
+  content: "";
+  background-image: var(--icon-selected);
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1rem; /* 图标宽度 */
+  height: 1rem; /* 图标高度 */
+  margin-right: 0.2rem; /* 图标与文字间的间距 */
+}

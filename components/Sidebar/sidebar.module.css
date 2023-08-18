@@ -1,0 +1,61 @@
+.sidebar {
+  width: 1.1rem;
+  min-width: 1.1rem;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+.sidebarInner {
+  height: 90vh;
+  width: 0;
+  overflow: hidden;
+}
+
+.open {
+  width: 15rem;
+  min-width: 15rem;
+}
+.open .sidebarInner {
+  width: calc(15rem - 1.1rem);
+  overflow: auto;
+  /* background-color: rgba(0, 0, 0, 0.04); */
+  border-radius: 1rem;
+}
+.open .sidebarInner ::-webkit-scrollbar {
+  display: none;
+}
+
+.toggleButton {
+  display: block;
+  margin: auto;
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+
+.imgBtn {
+    width: 1.1rem;
+    height: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+.btnArea {
+    position: absolute;
+    right: 0rem;
+    width: 1.1rem;
+    height: 100%;
+    top: 0;
+}
+
+.btnRect {
+    position: relative;
+    top: 50%;
+    height: 5rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* 透明度 */
+    opacity: 0.9;
+    border-radius: 5px;
+    cursor: pointer;
+}

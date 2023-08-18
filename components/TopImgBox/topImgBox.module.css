@@ -1,0 +1,102 @@
+.topImgBox {
+    width: 90%;
+    min-height: 8rem;
+    margin: 3.4rem auto;
+    position: relative;
+    border-radius: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    
+    /* 透明度 */
+}
+.topImgBox:hover {
+
+}
+.topImg {
+    width: 48%;
+    /* 宽高比1：1 */
+    aspect-ratio: 1 / 1;
+    height: auto;
+    position: absolute;
+    top: -2.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+.topImg:hover {
+    /* 旋转一圈动画 */
+    transform: translateX(-50%) rotate(360deg);
+}
+
+.textArea {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 3rem;
+}
+
+.textArea .author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: darkorange;
+}
+
+.textArea .position, .textArea .email {
+    margin-top: 0.8rem;
+    font-size: 0.96rem;
+    color: gray
+}
+.email {
+    display: flex;
+    align-items: center;
+}
+.email::before {
+    content: "";
+    display: inline-block;
+    background-image: url('/email_gray.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1rem; /* 图标宽度 */
+    height: 1rem; /* 图标高度 */
+    margin-right: 0.2rem; /* 图标与文字间的间距 */
+}
+.textArea .email:hover {
+    cursor: pointer;
+    color: black;
+}
+.email:hover::before {
+    background-image: url('/email_black.svg');
+}
+.textArea .content {
+    font-size: 0.96rem;
+    color: gray;
+    margin-top: 0.8rem;
+}
+
+.githubBtn {
+    display: flex;
+    align-items: center;
+    font-size: 0.96rem;
+    color: gray;
+}
+
+.githubBtn::before {
+    content: "";
+    display: inline-block;
+    background-image: url('/github-gray.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1rem; /* 图标宽度 */
+    height: 1rem; /* 图标高度 */
+    margin-right: 0.2rem; /* 图标与文字间的间距 */
+}
+.githubBtn:hover {
+    cursor: pointer;
+    color: black;
+}
+.githubBtn:hover::before {
+    background-image: url('/github-fill.svg');
+}
+.bottomBtns {
+    margin-top: 0.8rem;
+}

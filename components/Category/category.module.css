@@ -1,0 +1,70 @@
+@media (min-width: 768px) {
+    .container {
+        min-width: 6rem;
+        position: sticky;
+        top: 0;
+    }
+    .box {
+        border: 1px solid skyblue;
+        border-radius: 0.6rem;
+        max-height: max-content;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        max-height: 78vh;
+        overflow: auto;
+    }
+    .item {
+        display: block;
+        width: 100%;
+        line-height: 1.4;
+        color: gray;
+        position: relative;
+    }
+    .item:hover, .itemSelected {
+        color: black;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    
+    
+    
+}
+
+@media(max-width: 768px) {
+    .container {
+        
+    }
+    .item {
+        margin: 0.4rem;
+        display: inline-block;
+        color: gray;
+        position: relative;
+        
+    }
+    .item:hover, .item:focus,.itemSelected {
+        color: black;
+        cursor: pointer;
+    }
+    .item:hover::after, .itemSelected::after {
+        content: "";
+        position: absolute;
+        top: 120%;
+        left: -10%;
+        width: 120%;
+        height: 3px;
+        border-radius: 10%;
+        background-color: skyblue;
+        
+      }
+      .item:hover::after {
+          animation-name: item-slide;
+          animation-duration: 0.5s;
+      }
+      @keyframes item-slide {
+        0% {
+          width: 0;
+        }
+      }
+}
