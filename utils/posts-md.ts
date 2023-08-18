@@ -186,7 +186,15 @@ export async function getTargetPageMetaDatas(
             }
         })
         .sort((a, b) =>
-            (!a.attributes.top && dayjs(a.attributes.date).utc().isBefore(dayjs(b.attributes.date))) ? 1 : -1
+            {
+                if (a.attributes.top && !b.attributes.top) {
+                    return -1; // a 置顶
+                } else if (!a.attributes.top && b.attributes.top) {
+                    return 1; // b 置顶
+                } else {
+                    return dayjs(b.attributes.date).isBefore(dayjs(a.attributes.date)) ? -1 : 1;
+                }
+            }
         )
         .slice((pageNum - 1) * pageSize, pageNum * pageSize);
     return metaDataFiltered;
